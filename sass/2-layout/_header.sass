@@ -1,0 +1,51 @@
+@use '../1-base/variables'
+
+.header 
+    background-image: url(../img/bg-hero-mobile.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    display: flex
+    flex-direction: column
+    padding-top: 2rem
+
+    &__nav
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+
+        &__logo
+            width: 120px
+
+        &__btn
+            background-color: variables.$white-color
+            padding: 8px
+            width: 100px
+            border-radius: 50px
+            border: none
+            color: variables.$dark-cyan-color
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+            font-weight: bold
+
+    &__content
+        padding-top: 80px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100vh
+        align-items: center
+
+        &--title
+            font-size: 1.6rem
+            text-align: center
+
+        &--text
+            font-size: 1rem
+            color: variables.$dark-cyan-color
+            text-align: center
+
+        &--banner
+            width: 100%
+            max-width: 1200px
+            padding: 2rem 0
