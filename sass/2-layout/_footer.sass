@@ -1,0 +1,62 @@
+@use '../1-base/variables'
+
+
+.footer
+    background-color: variables.$dark-cyan-color
+    padding-top: 150px
+    display: flex
+    flex-direction: column
+
+    &__title
+        font-size: 2rem
+        color: variables.$white-color
+        padding-bottom: 1rem
+
+    &__content
+        display: flex
+        flex-direction: column
+
+        &__list
+            display: flex
+            flex-direction: column
+            padding-bottom: 2rem
+
+            li  
+                padding-bottom: 1rem
+
+                img 
+                    height: 20px
+                    width: 20px
+
+                a   
+                   font-size: .9rem
+                   padding-left: 20px
+
+        &__nav
+            li
+                padding-bottom: 1rem
+
+        &__social
+            padding-top: 2rem
+            &--icon
+                display: flex
+                justify-content: space-around
+                padding-left: 60px
+                padding-right: 60px
+
+                li
+                    border: 1px solid variables.$white-color
+                    padding: 5px 10px
+                    border-radius: 180px
+
+    p
+        text-align: center
+        color: variables.$white-color
+        font-size: .9rem
+        padding-top: 2rem
+        padding-bottom: 2rem
+          
+                    
+
+                
+
