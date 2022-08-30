@@ -1,4 +1,5 @@
 @use '../1-base/variables'
+@use '../1-base/_base-mixins'
 
 
 .footer
@@ -6,6 +7,7 @@
     padding-top: 150px
     display: flex
     flex-direction: column
+
 
     &__title
         font-size: 2rem
@@ -15,14 +17,23 @@
     &__content
         display: flex
         flex-direction: column
+        @include base-mixins.tablet
+            flex-direction: row
+            justify-content: space-between
 
         &__list
             display: flex
             flex-direction: column
             padding-bottom: 2rem
+            @include base-mixins.tablet
+                width: 33%
+                padding-right: 3rem
+                
 
             li  
                 padding-bottom: 1rem
+
+              
 
                 img 
                     height: 20px
@@ -33,16 +44,41 @@
                    padding-left: 20px
 
         &__nav
-            li
-                padding-bottom: 1rem
+            @include base-mixins.tablet
+                width: 33%
+    
+            ul
+                @include base-mixins.tablet
+                    display: flex
+                    flex-wrap: wrap
+                    align-items: center
+                    justify-content: space-between
+
+
+                li
+                    padding-bottom: 1rem
+                    @include base-mixins.tablet
+
+                        
+
+
+
 
         &__social
             padding-top: 2rem
+            @include base-mixins.tablet
+                width: 33%
+                padding: 1rem
+            
             &--icon
                 display: flex
                 justify-content: space-around
                 padding-left: 60px
                 padding-right: 60px
+                @include base-mixins.tablet
+                    font-size: .9rem
+                    width: 170px
+                    margin-left: 50px
 
                 li
                     border: 1px solid variables.$white-color
@@ -55,6 +91,8 @@
         font-size: .9rem
         padding-top: 2rem
         padding-bottom: 2rem
+        @include base-mixins.tablet
+            text-align: right
           
                     
 
