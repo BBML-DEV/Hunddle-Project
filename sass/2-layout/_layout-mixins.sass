@@ -2,19 +2,48 @@
 
 
 @mixin cards-users
-    img
-        padding-bottom: 1rem
+    .user__card__banner
         width: 100%
 
-    h2
-        text-align: center
-        padding-bottom: 1rem
-        font-size: 1rem
+        img
+            width: 100%
 
-    p
-        text-align: center
-        font-size: .8rem
-        color: variables.$gray-color
+    .user__card__content
+        width: 100%
+
+        h2
+            text-align: center
+            padding-bottom: 1rem
+            font-size: 1rem
+
+        p
+            text-align: center
+            font-size: .8rem
+            color: variables.$gray-color
+
+@mixin cards-users-desk
+    width: 80%
+    height: 50vh
+
+
+    .user__card__banner
+        width: 50%
+
+        img
+            width: 80%
+
+    .user__card__content
+        width: 50%
+
+        h2
+            text-align: center
+            padding-bottom: 1rem
+            font-size: 2.5rem
+
+        p
+            text-align: center
+            font-size: 1.2rem
+            color: variables.$gray-color
 
 @mixin card-template
     background-color: variables.$white-color
@@ -23,3 +52,9 @@
     margin: 2rem 0rem
     padding: 2rem
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+
+
+@mixin direction
+    width: 100%
+    display: flex
+    align-items: center

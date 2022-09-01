@@ -25,6 +25,7 @@
             display: flex
             flex-direction: column
             padding-bottom: 2rem
+            
             @include base-mixins.tablet
                 width: 33%
                 padding-right: 3rem
@@ -53,16 +54,14 @@
                     flex-wrap: wrap
                     align-items: center
                     justify-content: space-between
+                @include base-mixins.desktop
+                    flex-direction: column
 
 
                 li
                     padding-bottom: 1rem
-                    @include base-mixins.tablet
 
                         
-
-
-
 
         &__social
             padding-top: 2rem
@@ -79,6 +78,8 @@
                     font-size: .9rem
                     width: 170px
                     margin-left: 50px
+                @include base-mixins.desktop
+                    padding: 0px
 
                 li
                     border: 1px solid variables.$white-color
@@ -97,4 +98,3 @@
                     
 
                 
-

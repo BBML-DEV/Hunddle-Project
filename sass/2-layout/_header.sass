@@ -9,6 +9,9 @@
     display: flex
     flex-direction: column
     padding-top: 2rem
+    @include base-mixins.desktop
+        background-image: url(../img/bg-hero-desktop.svg)
+        
 
     &__nav
         display: flex
@@ -35,32 +38,63 @@
         padding-top: 80px
         display: flex
         flex-direction: column
-        justify-content: space-between
+        justify-content: space-around
         height: 100vh
         align-items: center
+        @include base-mixins.desktop
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
 
-        &--title
-            font-size: 1.6rem
-            text-align: center
-            @include base-mixins.tablet
-                font-size: 2.5rem
+        &__info 
+            @include base-mixins.desktop
+             display: flex
+             padding-top: 150px
+             flex-direction: column
+             align-items: center
+             width: 45%
+             padding-bottom: 100px
+             
+             
 
-        &--text
-            font-size: 1rem
-            color: variables.$dark-cyan-color
-            text-align: center
-            @include base-mixins.tablet
-                font-size: 1.2rem
+            &--title
+                font-size: 1.6rem
+                text-align: center
+                @include base-mixins.tablet
+                    font-size: 2.5rem
+                @include base-mixins.desktop
+                    text-align: left
+                    width: 100%  
 
-        button
-            @include base-mixins.tablet
-                width: 50%
-                padding: 1.2rem 0rem
+            &--text
+                font-size: 1rem
+                color: variables.$dark-cyan-color
+                text-align: center
+                @include base-mixins.tablet
+                    font-size: 1.2rem
+                @include base-mixins.desktop
+                    text-align: left
+                    width: 100%
+        
+
+            button
+                margin: 2rem
+                @include base-mixins.tablet
+                    width: 90%
+                    padding: 1.2rem 0rem
+                @include base-mixins.desktop
+                    font-size: 1rem
+                    width: 70%
+                    margin-right: 150px
+           
+
 
 
         &--banner
             width: 100%
             max-width: 1000px
-            padding: 2rem 0
             @include base-mixins.tablet
                 width: 80%
+            @include base-mixins.desktop
+                 width: 50%
+                 

@@ -11,28 +11,28 @@
         @include layout-mixins.card-template
         @include layout-mixins.cards-users
         @include base-mixins.tablet
-            width: 100%
-            display: flex
+            @include layout-mixins.direction
             flex-direction: row-reverse
-            align-items: center
+        @include base-mixins.desktop
+            @include layout-mixins.cards-users-desk
 
     &__card-2
         @include layout-mixins.card-template
         @include layout-mixins.cards-users
         @include base-mixins.tablet
-            width: 100%
-            display: flex
+            @include layout-mixins.direction
             flex-direction: row
-            align-items: center
+        @include base-mixins.desktop
+            @include layout-mixins.cards-users-desk
 
     &__card-3
         @include layout-mixins.card-template
         @include layout-mixins.cards-users
         @include base-mixins.tablet
-            width: 100%
-            display: flex
+            @include layout-mixins.direction
             flex-direction: row-reverse
-            align-items: center
+        @include base-mixins.desktop
+            @include layout-mixins.cards-users-desk
 
 
 
